@@ -231,7 +231,6 @@ func doCallgraph(ctxt *build.Context, algo, format string, tests bool, args []st
 
 	ins, before := ChainBefore(node)
 	after, outs := ChainAfter(node)
-	fmt.Println(len(ins), len(before), len(after), len(outs))
 	chain := append(before, after[1:]...)
 
 	sort.Sort(SortNodes(ins))
